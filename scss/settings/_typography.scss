@@ -1,0 +1,91 @@
+@use "sass:map";
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo__font {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 49px;
+  color: $color-black;
+  margin-bottom: 20px;
+  margin-top: 130px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: $color-black;
+  margin: 50px 0;
+  text-align: center;
+
+  @media screen and (min-width: map.get($medias, lg)) {
+    font-size: 36px;
+    margin: 30px 0 30px;
+  }
+
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  letter-spacing: 6px;
+  color: $color-black;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 19px;
+}
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  color: $color-black;
+  //width: 130px;
+  text-align: center;
+  margin-bottom: 25px;
+
+}
+
+
+.banner-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: $color-black;
+  margin-bottom: 28px;
+  @media screen and (min-width: map.get($medias, lg)) {
+    margin-bottom: 38px;
+  }
+}
+
+.benefits__title{
+  text-align: left;
+}
+
+.benefits__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  @media screen and (min-width: map.get($medias, lg)) {
+    margin-bottom: 50px;
+  }
+}
+
+.pricing__title{
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+.font-awesome-icons::before{
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+

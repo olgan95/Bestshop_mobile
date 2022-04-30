@@ -1,0 +1,36 @@
+@use "sass:map";
+
+.footer{
+  background-color: $color-light-grey;
+  box-shadow: 0 -5px 40px #00000029;
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    @media screen and (min-width: map.get($medias, lg)) {
+      padding: 20px 0 17px 0;
+    }
+
+  }
+  &__logo-container{
+    text-align: left;
+    .reserved{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      color: $color-grey;
+    }
+  }
+  &__icon{
+    height: 24px;
+    margin-left: 20px;
+  }
+
+  &__logo{
+    text-align: left;
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}

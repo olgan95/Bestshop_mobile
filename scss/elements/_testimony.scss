@@ -1,0 +1,57 @@
+@use "sass:map";
+
+.testimony {
+
+  &__container{
+    padding: 3rem;
+    @media screen and (min-width: map.get($medias, lg)) {
+      padding: 6rem;
+    }
+
+  }
+
+  &__title{
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin-top: 0;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 100px;
+
+  }
+  &__icon {
+    position: relative;
+
+    &__eye{
+      padding-top: 6px;
+    }
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      right: 1.5rem;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &__person::before{
+      background-color: $color-redish;
+    }
+    &__eye::before{
+      background-color: $color-primary;
+    }
+    &__catalog::before{
+      background-color: $color-green;
+    }
+  }
+
+}

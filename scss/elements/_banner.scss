@@ -1,0 +1,26 @@
+@use "sass:map";
+
+.banner {
+  box-shadow: inset 0 -15px 30px -15px rgb(0 0 0 / 16%);
+
+  &__img{
+    width: 220%;
+    height: auto;
+    transform: translateX(-28%);
+    @media screen and (min-width: map.get($medias, lg)) {
+      width: 100%;
+      transform: unset;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &-title {
+
+  }
+}

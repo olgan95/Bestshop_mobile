@@ -1,0 +1,168 @@
+@use "sass:map";
+@use "sass:math";
+
+.benefits {
+
+  &__title{
+    margin: 30px 0 50px;
+  }
+
+  &__trumpet{
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(20px);
+  }
+
+  background-color: $color-light-grey;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__trumpet{
+      background-color: $color-white;
+      border-radius: 5px;
+      border: 1px solid #E8E9ED;
+    }
+  }
+
+  &__main {
+    padding: 40px 0;
+  }
+
+  &__container {
+    background-color: $color-white;
+    margin: 40px auto;
+    padding: 36px;
+    border-radius: 5px;
+    border: 1px solid #E8E9ED;
+    width: 90%;
+    overflow: hidden;
+
+
+    @media screen and (min-width: map.get($medias, lg)) {
+      height: 370px;
+      &:first-child {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__trumpet{
+      padding: 0 0;
+      background-color: unset;
+      border: 0px solid white;
+    }
+
+
+  }
+
+  &__png {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    &__trumpet{
+      background-color: $color-green;
+      border-radius: 5px;
+      border: 1px solid #E8E9ED;
+    }
+
+    &__before {
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+      }
+
+      &__redish::before {
+        width: 20%;
+        height: 80%;
+        border-radius: 40%;
+        top: -10%;
+        right: 30%;
+        background-color: $color-redish;
+        transform: rotate(45deg);
+        @media screen and (min-width: map.get($medias, lg)) {
+          border-radius: 20%;
+          height: 100%;
+          width: 33%;
+          right: 15%;
+          transform: translateY(8px) translate(-30px) rotate(45deg);
+        }
+      }
+
+      &__blue::before {
+        height: 100%;
+        width: 32%;
+        border-radius: 50%;
+        top: -5%;
+        right: 38%;
+        background-color: $color-primary;
+        @media screen and (min-width: map.get($medias, lg)) {
+          width: 58%;
+          transform: translateX(30px) translateY(-5px);
+        }
+      }
+    }
+
+
+    .benefits__macbook {
+      width: 40%;
+      z-index: 2;
+
+      @media screen and (min-width: map.get($medias, lg)) {
+        width: 60%;
+        transform: translateY(40px);
+      }
+    }
+
+    .benefits__iphone {
+      width: 40%;
+      z-index: 2;
+
+      @media screen and (min-width: map.get($medias, lg)) {
+        width: 80%;
+
+      }
+    }
+
+    &__trumpet{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+
+  }
+
+
+  &__text {
+    position: relative;
+
+      @media screen and (min-width: map.get($medias, lg)) {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -50px;
+          left: 0;
+          right: 0;
+          height: 4px;
+          width: 60%;
+        }
+        &__green::after{
+          background-color: $color-green;
+        }
+        &__blue::after{
+          background-color: $color-primary;
+        }
+        &__redish::after{
+          background-color: $color-redish;
+        }
+
+      }
+  }
+
+}

@@ -1,0 +1,18 @@
+@use "sass:map";
+.logo{
+  width: 100%;
+  //padding: 2rem;
+
+  @media screen and (min-width: map.get($medias, md)) {
+    width: 40%;
+  }
+
+
+  &__logo{
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,117 @@
+@use "sass:map";
+
+.pricing{
+  &__container{
+    margin-bottom: 50px;
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin-bottom: 170px;
+    }
+  }
+  &__title{
+    margin-top: 100px;
+
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin-bottom: 70px;
+    }
+  }
+  &__column{
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem auto;
+
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin: 0 30px;
+      flex-direction: column;
+    }
+
+    &__basic{
+      border: 1px $color-redish solid;
+      height: 460px;
+    }
+    &__proffessional{
+      border: 1px $color-primary solid;
+      box-shadow: 5px 10px 27px #07ACE629;
+      height: 500px;
+
+    }
+    &__premium{
+      border: 1px $color-green solid;
+      height: 460px;
+    }
+    &__title{
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      margin-top: 34px;
+      font-weight: 700;
+      @media screen and (min-width: map.get($medias, lg)) {
+        font-size: 36px;
+      }
+    }
+
+
+  }
+
+  &__price{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 46px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 300;
+    &__basic{
+      color: $color-redish;
+    }
+    &__proffessional{
+      color: $color-primary;
+    }
+    &__premium{
+      color: $color-green;
+    }
+  }
+  &__price-list{
+    margin-bottom: 55px;
+    &-item, &-item__cross{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    &-item::before{
+      content: "";
+      background-image: url("../images/Ckechmark-1.svg");
+      height: 11px;
+      width: 11px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    &-item__cross::before{
+      content: "";
+      background-image: url("../images/Close.svg");
+      height: 11px;
+      width: 11px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &__limited{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  &__pricing-plan{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: map.get($medias, lg)) {
+      display: unset;
+    }
+
+  }
+
+}

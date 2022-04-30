@@ -1,0 +1,111 @@
+@use "sass:map";
+
+.contact {
+  margin-bottom: 140px;
+
+  &__container {
+    padding: 30px;
+    @media screen and (min-width: map.get($medias, lg)) {
+      padding: 0;
+    }
+  }
+
+  &__header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 49px;
+    text-align: left;
+    margin: 5px 0;
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin: 50px 0;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 42px;
+  }
+
+  &__detail {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: $color-grey;
+    margin-right: 10px;
+  }
+
+  &__email-phone{
+    margin-bottom: 56px;
+    @media screen and (min-width: map.get($medias, lg)) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      font-family: 'Open Sans', sans-serif;
+      color: $color-primary;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    input[type="text"] {
+      padding: 20px;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #95989A;
+      margin-bottom: 42px;
+    }
+
+    .checkbox {
+      cursor: pointer;
+      display: flex;
+      font-weight: 400;
+      color: #707070;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      line-height: 25px;
+    }
+
+    .checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkbox span {
+      height: 24px;
+      width: 24px;
+      flex-shrink: 0;
+      border: 1px solid #95989A;
+      cursor: pointer;
+      margin-right: 15px;
+      border-radius: 4px;
+    }
+
+    .checkbox input:checked + span {
+      background-image: url("../images/Checkmark.svg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+  }
+
+
+}

@@ -1,0 +1,95 @@
+@use "sass:map";
+
+.menu {
+  box-shadow: 0 3px 6px #00000029;
+  width: 100%;
+  @media screen and (min-width: map.get($medias, md)) {
+    width: 40%;
+    box-shadow: unset;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    color:$color-grey;
+
+    &-item {
+      text-transform: capitalize;
+      padding: 1rem 0;
+
+      &:hover {
+        color: black;
+        font-weight: 800;
+      }
+
+      @media screen and (min-width: map.get($medias, md)) {
+        padding: 2rem 2rem;
+        margin: unset;
+        &:hover {
+          box-shadow: inset 0 -4px $color-primary;
+        }
+      }
+
+    }
+
+    @media screen and (min-width: map.get($medias, md)) {
+      overflow: visible;
+      max-height: unset;
+      display: flex;
+      align-content: space-between;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: unset;
+    }
+  }
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2rem;
+
+    @media screen and (min-width: map.get($medias, md)) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background-color: $color-primary;
+      margin-bottom: 3px;
+      transition: all 0.3s linear;
+    }
+  }
+}
+
+
+.is-hidden {
+  display: none;
+}
+
+input:checked {
+  & ~ div {
+    .menu__list {
+      max-height: 15rem;
+      padding: 1.5rem;
+      color:$color-grey;
+    }
+    .menu__burger{
+      span{
+        &:first-child{
+          transform: translateY(5px) rotate(225deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-225deg);
+        }
+        &:nth-child(3) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
