@@ -57,9 +57,9 @@ h4 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   color: $color-black;
-  margin-bottom: 28px;
+  margin: 0 10px 28px;
   @media screen and (min-width: map.get($medias, lg)) {
-    margin-bottom: 38px;
+    margin: 0 0 38px;
   }
 }
 

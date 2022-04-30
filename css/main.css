@@ -944,11 +944,11 @@ h4 {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   color: #000000;
-  margin-bottom: 28px;
+  margin: 0 10px 28px;
 }
 @media screen and (min-width: 992px) {
   .banner-text {
-    margin-bottom: 38px;
+    margin: 0 0 38px;
   }
 }
 
@@ -1246,7 +1246,7 @@ input:checked ~ div .menu__burger span:nth-child(3) {
 @media screen and (min-width: 992px) {
   .benefits__png__before__blue::before {
     width: 58%;
-    transform: translateX(30px) translateY(-5px);
+    transform: translateX(30px) translateY(10px);
   }
 }
 .benefits__png .benefits__macbook {

@@ -103,7 +103,7 @@
         background-color: $color-primary;
         @media screen and (min-width: map.get($medias, lg)) {
           width: 58%;
-          transform: translateX(30px) translateY(-5px);
+          transform: translateX(30px) translateY(10px);
         }
       }
     }
